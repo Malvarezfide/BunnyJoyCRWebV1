@@ -1,0 +1,172 @@
+/* =========================================================
+   BULK ACTIONS
+========================================================= */
+
+.bulk-actions {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  margin-bottom: 12px;
+
+  padding: 12px 16px;
+
+  border: 1px solid #d9e2f3;
+
+  border-radius: 8px;
+
+  background: #f5f8ff;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.bulk-actions-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: #444;
+
+  font-size: 14px;
+
+  white-space: nowrap;
+}
+
+
+.bulk-actions-info strong {
+  color: #222;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.bulk-actions-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+}
+
+
+.bulk-clear {
+  padding: 8px 10px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #666;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+
+.bulk-clear:hover {
+  color: #222;
+
+  text-decoration: underline;
+}
+
+
+.bulk-clear:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.5;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .bulk-actions {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  .bulk-actions-buttons {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .bulk-actions {
+    padding: 12px;
+
+    gap: 12px;
+  }
+
+
+  .bulk-actions-info {
+    width: 100%;
+
+    white-space: normal;
+  }
+
+
+  .bulk-actions-buttons {
+    display: grid;
+
+    grid-template-columns:
+      1fr
+      1fr;
+
+    width: 100%;
+
+    gap: 8px;
+  }
+
+
+  .bulk-actions-buttons > button {
+    width: 100%;
+
+    min-height: 40px;
+  }
+
+
+  .bulk-clear {
+    min-height: 40px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .bulk-actions-buttons {
+    grid-template-columns: 1fr;
+  }
+
+}

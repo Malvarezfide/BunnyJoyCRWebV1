@@ -1,0 +1,77 @@
+.product-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-bottom: 20px;
+}
+
+
+.product-stat {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  padding: 16px 18px;
+
+  background: #fff;
+
+  border: 1px solid #e5e5e5;
+
+  border-radius: 8px;
+
+  box-sizing: border-box;
+}
+
+
+.product-stat-label {
+  color: #777;
+
+  font-size: 13px;
+}
+
+
+.product-stat-value {
+  color: #222;
+
+  font-size: 24px;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .product-stats {
+    gap: 8px;
+  }
+
+
+  .product-stat {
+    padding: 12px 10px;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+
+  .product-stat-label {
+    font-size: 11px;
+  }
+
+
+  .product-stat-value {
+    font-size: 20px;
+  }
+
+}

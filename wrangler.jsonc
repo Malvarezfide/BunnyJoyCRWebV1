@@ -1,0 +1,39 @@
+{
+	"name": "bunnyjoycr",
+	"main": "worker/src/index.js",
+	"compatibility_date": "2026-07-02",
+	"compatibility_flags": ["nodejs_compat"],
+	"observability": {
+		"enabled": true
+	},
+	"assets": {
+		"directory": "./frontend/dist",
+		"binding": "ASSETS",
+		"not_found_handling": "single-page-application",
+		"run_worker_first": [
+			"/",
+			"/products",
+			"/api/*",
+			"/media/*",
+			"/share/*",
+			"/product/*",
+			"/sitemap.xml",
+			"/robots.txt"
+		]
+    },
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "bunnyjoycr_db",
+			"database_id": "446a8642-0bf9-4018-a170-3cd7eaf55df7",
+			"remote": true
+		}
+	],
+	"r2_buckets": [
+		{
+			"bucket_name": "bunnyjoycr-images",
+			"binding": "bunnyjoycr-images",
+			"remote": true
+		}
+	]
+}

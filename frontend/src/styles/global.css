@@ -1,0 +1,21 @@
+/*
+  Estilos globales del panel administrativo.
+  Solo el "shell" de página que no pertenece a un componente
+  específico. El resto del CSS vive junto a cada componente
+  (ej: components/admin/ui/Button.css junto a Button.jsx).
+*/
+
+.admin-page {
+  padding: 32px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.admin-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 20px;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,6 @@
+/* Wrapper genérico de página dentro del panel admin */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

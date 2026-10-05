@@ -1,0 +1,152 @@
+/* =========================================================
+   BARRA INFERIOR MOBILE
+========================================================= */
+
+.mobile-bottom-nav {
+  position: fixed;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border-top: 1px solid rgba(120, 113, 108, 0.15);
+
+  box-shadow:
+    0 -4px 20px rgba(0, 0, 0, 0.08);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  z-index: 40;
+
+  padding:
+    5px
+    max(8px, env(safe-area-inset-left))
+    calc(5px + env(safe-area-inset-bottom))
+    max(8px, env(safe-area-inset-right));
+
+  /*
+    La transición es deliberadamente rápida.
+    Queremos que parezca parte natural del scroll.
+  */
+
+  transition:
+    transform 0.28s ease,
+    opacity 0.22s ease;
+}
+
+
+/* =========================================================
+   VISIBLE
+========================================================= */
+
+.mobile-bottom-nav--visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* =========================================================
+   OCULTO
+========================================================= */
+
+.mobile-bottom-nav--hidden {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   ITEMS
+========================================================= */
+
+.mobile-bottom-nav__item {
+  flex: 1;
+
+  min-width: 0;
+
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3px;
+
+  border: 0;
+  outline: none;
+
+  background: transparent;
+
+  color: #78716c;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+
+/* =========================================================
+   ICONOS
+========================================================= */
+
+.mobile-bottom-nav__icon {
+  width: 23px;
+  height: 23px;
+
+  transition:
+    transform 0.2s ease;
+}
+
+
+/* =========================================================
+   ITEM ACTIVO
+========================================================= */
+
+.mobile-bottom-nav__item--active {
+  color: #ec4899;
+  font-weight: 700;
+}
+
+.mobile-bottom-nav__item--active
+.mobile-bottom-nav__icon {
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   TOUCH
+========================================================= */
+
+.mobile-bottom-nav__item:active {
+  transform: scale(0.94);
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 1024px) {
+  .mobile-bottom-nav {
+    display: none;
+  }
+}

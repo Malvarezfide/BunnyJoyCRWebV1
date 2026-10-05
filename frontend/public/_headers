@@ -1,0 +1,22 @@
+# Solo aplica a respuestas de Workers Assets (no a las del Worker, que
+# fija sus propios Cache-Control en worker/src/utils/http.js).
+#
+# IMPORTANTE: si varias reglas coinciden, Cloudflare une los valores de una
+# misma cabecera con coma. Por eso NO se define Cache-Control en /*: el
+# valor por defecto de Assets para HTML ya es "public, max-age=0,
+# must-revalidate" (siempre se revalida con ETag y permite bfcache), y
+# aquí solo se añade lo que /assets/* y /images/* necesitan.
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Archivos con hash de contenido generados por Vite: nunca cambian.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Imágenes estáticas SIN hash (temporadas): se pueden reemplazar,
+# por eso solo un día.
+/images/*
+  Cache-Control: public, max-age=86400

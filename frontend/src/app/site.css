@@ -1,0 +1,21 @@
+/*
+  Estilos globales del sitio público (Home, Products, ProductDetail).
+  El panel administrativo NO importa este archivo: usa sus propios
+  CSS co-ubicados en components/admin/** (ver styles/global.css).
+*/
+
+@import "tailwindcss";
+
+body {
+  margin: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}

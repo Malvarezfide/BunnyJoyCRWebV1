@@ -1,0 +1,163 @@
+/* =========================================================
+   TAG TABLE
+========================================================= */
+
+.tag-table-mobile {
+  display: none;
+}
+
+
+/* =========================================================
+   MOBILE CARD
+========================================================= */
+
+.tag-card {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+
+  padding: 16px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.tag-card__header h3 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  word-break: break-word;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+.tag-card__body {
+  padding-top: 2px;
+}
+
+
+.tag-card__field {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.tag-card__field span {
+  color: #6b7280;
+
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+
+.tag-card__field strong {
+  color: #374151;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.tag-card__actions {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 8px;
+
+  padding-top: 14px;
+
+  border-top: 1px solid #e5e7eb;
+}
+
+
+.tag-card__actions button {
+  width: 100%;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.tag-empty {
+  padding: 30px 16px;
+
+  color: #6b7280;
+
+  text-align: center;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .tag-table-desktop {
+    display: none;
+  }
+
+
+  .tag-table-mobile {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .tag-card {
+    padding: 14px;
+  }
+
+
+  .tag-card__actions {
+    grid-template-columns: 1fr;
+  }
+
+}
